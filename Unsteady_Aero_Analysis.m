@@ -38,7 +38,7 @@ end
 
 Cl_t_steady = C_l_steady_amplitude*cos(k*tau + C_l_steady_phase); % Change to cos() or to sin() depending on alpha definition
 
-%% Simpsons model (Imaginary as alpha = \bar alpha * sin(ks)); 2 subscript, is for Simpson's paper.
+%% Simpson's model (Imaginary as alpha = \bar alpha * sin(ks)); 2 subscript, is for Simpson's paper.
 
 Cl2_t = 2*pi*alpha*(k*cos(k*tau) + a*k^2*sin(k*tau) + 2*F*(sin(k*tau) + (1/2-a)*k*cos(k*tau)) + 2*G*(cos(k*tau) - (1/2-a)*k*sin(k*tau)));
 
@@ -51,7 +51,7 @@ for i = 1:1000
     Cd2_t(i) = Cd_Lift2_t(i) + Cd_LES2_t(i); % Total drag coefficient
 end
 
-%% This way is the introduced by my self, using complex exponential expressions instead of working with sin() and cos()
+%% This way is the introduced by myself, using complex exponential expressions instead of working with sin() and cos()
 
 for i = 1:1000
     Cd_Lift_t(i) = real(C_l*exp(1i*k*tau(i)))*real(alpha*exp(1i*k*tau(i)));
