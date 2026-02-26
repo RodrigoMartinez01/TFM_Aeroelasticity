@@ -1,0 +1,1 @@
+This project is y final thesis for the Master in Aeronautical Engineering. The main goal of the project is to study a method to solve a non linear aeroelastic system in the time domain, in order to accouunt for the effect that the potential unsteady drag can have on the behavior of the system. 
